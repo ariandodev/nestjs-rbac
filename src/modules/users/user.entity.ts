@@ -6,7 +6,7 @@
 // This table is used to manage user data
 
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany, CreateDateColumn, UpdateDateColumn } from 'typeorm';
-import { User_To_Role } from './roles/user_to_role.entity';
+import { User_To_Role } from '../roles/user_to_role.entity';
 
 @Entity()
 export class User {
