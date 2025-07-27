@@ -1,3 +1,6 @@
+## WARNING!
+WORK IN PROGRESS, NOT READY FOR ANYTHING YET!
+
 ## Project Description
 This is a headless nestjs skeleton app that implements RBAC (Role Based Access Control) using a relational database intended to be used as a starting point to build my projects. Anyone is welcome to contribute to the project or use it for any purpose free of charge.
 
