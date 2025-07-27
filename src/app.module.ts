@@ -15,8 +15,8 @@ import { User } from './modules/users/user.entity';
       password: '',
       database: 'nestjs_rbac',
       entities: [User,],
-      // Be sure to set synchronize to false in production.
       // Synchronize is used to automatically create database tables based on our entities.
+      // Be sure to set synchronize to false in production to avoid data loss.
       synchronize: true,
     }),
   ],
