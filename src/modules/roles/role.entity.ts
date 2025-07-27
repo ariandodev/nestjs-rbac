@@ -7,6 +7,7 @@
 
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import { User_To_Role } from './user_to_role.entity';
+import { Permission_To_Role } from '../permissions/permission_to_role.entity';
 
 @Entity()
 export class Role {
@@ -27,4 +28,7 @@ export class Role {
 
   @OneToMany(() => User_To_Role, userToRole => userToRole.role)
   users: User_To_Role[];
+
+  @OneToMany(() => Permission_To_Role, permissionToRole => permissionToRole.role)
+  permissions: Permission_To_Role[];
 }

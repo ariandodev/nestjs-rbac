@@ -3,8 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './modules/users/user.entity';
-import { Role } from './modules/users/roles/role.entity';
-import { User_To_Role } from './modules/users/roles/user_to_role.entity';
+import { Role } from './modules/roles/role.entity';
+import { User_To_Role } from './modules/roles/user_to_role.entity';
+import { Permission } from './modules/permissions/permission.entity';
+import { Permission_To_Role } from './modules/permissions/permission_to_role.entity';
 
 @Module({
   imports: [
@@ -16,7 +18,7 @@ import { User_To_Role } from './modules/users/roles/user_to_role.entity';
       username: 'root',
       password: '',
       database: 'nestjs_rbac',
-      entities: [User, Role, User_To_Role],
+      entities: [User, Role, User_To_Role, Permission, Permission_To_Role],
       // Synchronize is used to automatically create or alter database tables based on our entities.
       // Be sure to set synchronize to false in production to avoid data loss.
       synchronize: true,
