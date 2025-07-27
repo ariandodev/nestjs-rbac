@@ -3,7 +3,9 @@
 // TypeORM automatically creates or update table in the database 
 // based on this entity when synchronize is set to true.
 
-// This table is used to manage roles data
+// This table is used to manage permissions data
+// Each permission can be associated with multiple roles, 
+// and is associated with specific resources.
 
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import { Permission_To_Role } from './permission_to_role.entity';
