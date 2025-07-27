@@ -17,7 +17,7 @@ import { User_To_Role } from './modules/users/roles/user_to_role.entity';
       password: '',
       database: 'nestjs_rbac',
       entities: [User, Role, User_To_Role],
-      // Synchronize is used to automatically create database tables based on our entities.
+      // Synchronize is used to automatically create or alter database tables based on our entities.
       // Be sure to set synchronize to false in production to avoid data loss.
       synchronize: true,
     }),
